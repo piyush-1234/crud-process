@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+
+<link href="/css/bootstrap.css" rel="stylesheet" type="text/css"
+	media="all" />
+<link href="/css/bootstrap.min.css" rel="stylesheet" type="text/css"
+	media="all" />
+<script type="text/javascript" src="/js/jquery.min.js"></script>
+<script type="text/javascript" src="/js/bootstrap.js"></script>
+<script type="text/javascript" src="/js/bootstrap.min.js"></script>
+</head>
+<body>
+	<br>
+	<br>
+	<br>
+	<div class="container">
+<p th:if="${msg}" th:text="${msg}"></p>
+		<div class="col-lg-8 m-auto d-block">
+			<h3>Crud Process Using spring boot</h3>
+			<form th:action="@{/save}" th:object="${user}" method="POST"
+				class="bg-light">
+				<div class="form-grp">
+					<label class="label">firstname</label> <input type="text" th:field="*{firstname}"
+						placeholder="firstname" class="form-control" />
+				</div>
+
+				<div class="form-grp">
+					<label class="label">lastname</label> <input type="text" th:field="*{lastname}"
+						placeholder="lastname" class="form-control" />
+				</div>
+
+				<div class="form-grp">
+					<label class="label">username</label> <input type="text" th:field="*{username}"
+						placeholder="username" class="form-control" />
+				</div>
+
+				<div class="form-grp">
+					<label class="label">email</label> <input type="text" th:field="*{email}"
+						placeholder="email" class="form-control" />
+				</div>
+
+
+				<div class="form-grp">
+					<label class="label">address</label> <input type="text" th:field="*{address}"
+						placeholder="email" class="form-control" />
+				</div>
+
+
+				<div class="form-grp">
+					<label class="label">contact</label> <input type="text" th:field="*{contact}"
+						placeholder="email" class="form-control" />
+				</div>
+
+
+				<div class="form-grp">
+					<label class="label">password</label> <input type="text" th:field="*{password}"
+						placeholder="email" class="form-control" /> 
+				</div>
+
+				<br> <input type="submit" class="btn btn-success"
+					value="submit" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				<a th:href="@{/show}" class="btn btn-warning">show data</a>
+
+			</form>
+
+		</div>
+
+	</div>
+
+
+</body>
+</html>
